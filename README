@@ -1,0 +1,8 @@
+tiddlywebplugins.ibuilder is a tool to help build instance packages.
+
+In TiddlyWeb, an instance package provides pre-defined tiddlers,
+bags, and recipes for a plugin.
+
+ibuilder replaces the development half of the functionality
+provided by tiddlywebplugins.instancer. See tiddlywebplugins.imaker
+for the other half.
