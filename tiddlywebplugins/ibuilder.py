@@ -2,7 +2,7 @@
 A collection of tools and functions for building tiddlywebplugins
 packages come with pre-determined tiddlers, bags and recipes.
 
-Use tiddlywebplugins.pkgstore to keep those entities in the 
+Use tiddlywebplugins.pkgstore to keep those entities in the
 target package.
 """
 
@@ -10,6 +10,9 @@ from tiddlyweb.model.bag import Bag
 from tiddlyweb.store import Store
 from tiddlyweb.util import std_error_message
 from tiddlywebplugins.twimport import recipe_to_urls, url_to_tiddler
+
+
+__version__ = '0.1'
 
 
 def cacher(args):
@@ -29,9 +32,8 @@ def cache_tiddlers(package_name):
 
     tiddler files are stored in <package>/resources/store
     """
-    print 'pn', package_name
     instance_module = __import__("%s.instance" % package_name, None, None,
-        ["instance"]) # XXX: unnecessarily convoluted and constraining!?
+        ["instance"])
     store_contents = instance_module.store_contents
 
     target_store = Store('tiddlywebplugins.pkgstore',
