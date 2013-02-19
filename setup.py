@@ -25,7 +25,6 @@ setup(
     packages = find_packages(exclude=['test']),
     install_requires = ['tiddlyweb',
         'tiddlywebplugins.pkgstore',
-        'tiddlywebplugins.utils',
         'tiddlywebplugins.twimport'
         ],
     zip_safe = False
