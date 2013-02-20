@@ -4,13 +4,18 @@
 creates local cache of instance tiddlers to be included in distribution
 """
 
-# For testing and development purposes
+import os
+import sys
+# extend module search path for access to local packages
+cwd = os.getcwd()
+sys.path.insert(0, cwd)
+
+# For development purposes we need access to local tiddlywebplugins
 try:
     import mangler
 except ImportError:
     pass
 
-import sys
 from tiddlywebplugins.ibuilder import cacher
 
 if __name__ == '__main__':
