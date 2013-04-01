@@ -12,7 +12,7 @@ from tiddlyweb.util import std_error_message
 from tiddlywebplugins.twimport import recipe_to_urls, url_to_tiddler
 
 
-__version__ = '0.1.1'
+__version__ = '0.1.2'
 
 
 def cacher(args):
