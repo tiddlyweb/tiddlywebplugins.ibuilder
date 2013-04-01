@@ -1,4 +1,4 @@
 
 store_contents = {
-        'bagone': ['testsrc/test.tid']
+        'bagone': ['testsrc/test.tid', 'testsrc/file.css']
 }

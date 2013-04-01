@@ -22,7 +22,7 @@ setup(
     scripts = ['twibuilder'],
     url = 'http://pypi.python.org/pypi/%s' % NAME,
     platforms = 'Posix; MacOS X; Windows',
-    packages = find_packages(exclude=['test']),
+    packages = find_packages(exclude=['test', 'testpackage']),
     install_requires = ['tiddlyweb',
         'tiddlywebplugins.pkgstore',
         'tiddlywebplugins.twimport'

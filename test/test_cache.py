@@ -15,6 +15,5 @@ def test_cache():
 
     assert os.path.exists('testpackage/resources/store')
     assert os.path.exists('testpackage/resources/store/bags/bagone/tiddlers/')
-
-
-
+    assert os.path.exists('testpackage/resources/store/bags/bagone/tiddlers/test')
+    assert os.path.exists('testpackage/resources/store/bags/bagone/tiddlers/file.css')
