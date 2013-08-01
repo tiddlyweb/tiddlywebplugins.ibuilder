@@ -32,8 +32,8 @@ def cache_tiddlers(package_name):
 
     tiddler files are stored in <package>/resources/store
     """
-    instance_module = __import__("%s.instance" % package_name, None, None,
-        ["instance"])
+    instance_module = __import__('%s.instance' % package_name, None, None,
+        ['instance'])
     store_contents = instance_module.store_contents
 
     target_store = Store('tiddlywebplugins.pkgstore',
@@ -43,7 +43,7 @@ def cache_tiddlers(package_name):
     for bag, uris in store_contents.items():
         sources[bag] = []
         for uri in uris:
-            if uri.endswith(".recipe"):
+            if uri.endswith('.recipe'):
                 urls = recipe_to_urls(uri)
                 sources[bag].extend(urls)
             else:
@@ -54,7 +54,7 @@ def cache_tiddlers(package_name):
         target_store.put(bag)
 
         for uri in uris:
-            std_error_message("retrieving %s" % uri)
+            std_error_message('retrieving %s' % uri)
             tiddler = url_to_tiddler(uri)
             tiddler.bag = bag.name
             target_store.put(tiddler)
